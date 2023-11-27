@@ -6,6 +6,7 @@ function GuessInput() {
     <form className="guess-input-wrapper" onSubmit={(event) => {
       event.preventDefault();
       console.log(guess);
+      setGuess("");
     }}>
       <label htmlFor="guess-input">Enter your guess:</label>
       <input
