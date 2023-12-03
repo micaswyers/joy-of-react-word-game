@@ -7,7 +7,7 @@ function Banner({ status, numGuesses, answer }) {
     return (
       <div className={"happy banner"}>
         <p>
-          <strong>Congratulations!</strong> You got it in <strong>{numGuesses}</strong> guesses.
+          <strong>Congratulations!</strong> You got it in <strong>{numGuesses}</strong> {numGuesses === 1 ? 'guess' : 'guesses'}.
         </p>
       </div>
     );
@@ -18,12 +18,6 @@ function Banner({ status, numGuesses, answer }) {
       </p>
     </div>;
   }
-
-  return (
-    <div className={`${result} banner`}>
-      <p> {resultString}</p>
-    </div>
-  );
 }
 
 export default Banner;
